@@ -56,16 +56,16 @@ h5{
 }
 
 #menu input[type="submit"]:hover {
-    border-color: #7d8488c2;
+    border-color: #b1b4b6c2;
     transform: scale(1.1);
-    background-color: #1f1f4480;
-    color:#a5afb8b2;
+    background-color: #24244e80;
+    color:#bec5cbb2;
     z-index: 1;
 }
 
 #contenedor {
-    padding-right: 250PX;
-    padding-top: 70PX;
+    padding-right: 260PX;
+    padding-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
