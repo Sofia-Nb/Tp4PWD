@@ -7,23 +7,23 @@
     <title>Buscar Persona</title>
 </head>
 <body>
-<div class="blurred-background"></div>
-<div class="container mt-4">
-
+<div class="blurred-background" style="height: 740px;"></div>
+<div class="container" style="height: 740px; box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15); background-color: #c6c2decc;">
+<br>
     <h3> Crear una página “autosPersona.php” que recibe un dni de una persona y muestra
 los datos de la persona y un listado de los autos que tiene asociados. Recordar usar la capa de control antes
 generada, no se puede acceder directamente a las clases del ORM.</h3><br>
-    <form id="formAutosPersona" action="./accion/accionBuscarPersona.php" method="post" >
+    <form id="formAutosPersona" style="background-color: #d2d0e1d5; box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);" action="./accion/accionBuscarPersona.php" method="post" >
     <h1>Buscar Autos asociados a personas por DNI</h1>
         <div class="form-group">
             <label for="dni"></label>
             <input type="text" id="dni" name="dni" class="form-control" placeholder="Ingrese documento" >
             <div id="error-message" class="error-message"></div>
         </div>
-        <button type="submit" class="btn btn-success">Buscar</button>
+        <button type="submit" class="btn btn-info">Buscar</button>
         <br>
-        <a href="./listaPersonas.php" class="btn btn-primary mt-4">Volver a la lista</a>
-        <a href="../../../menu.html" class="btn btn-primary mt-4">Volver al menu</a>
+        <a href="./listaPersonas.php" class="btn btn-dark mt-4">Volver a la lista</a>
+        <a href="../../../menu.html" class="btn btn-dark mt-4">Volver al menu</a>
     </form>
 
 </div>

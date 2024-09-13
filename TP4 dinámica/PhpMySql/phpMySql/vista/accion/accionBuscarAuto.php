@@ -7,12 +7,10 @@ include_once '../../control/ControlAuto.php';
 echo '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">';
 echo '<link rel="stylesheet" href="../assets/css/error.css">';
 echo '<body>';
-echo '<div class="blurred-background"></div>';
+echo '<div class="blurred-background" style="height: 740px;"></div>';
 
 $datos = dataSubmitted();
 $patente = isset($datos['patente']) ? $datos['patente'] : null;
-
-echo '<div class="container mt-4">';
 
 // Verificar si se recibió la patente
 if ($patente) {
@@ -24,8 +22,10 @@ if ($patente) {
     
     if ($auto) {
         // Mostrar los datos en una tabla
+        echo '<div class="container" style="height: 740px; box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15); background-color: #c6c2decc;">';
+        echo '<br>';
         echo '<h1>Resultados de la Búsqueda</h1>';
-        echo '<table class="table table-success table-bordered">';
+        echo '<table class="table table-dark table-bordered">';
         echo '<thead><tr><th>Patente</th><th>Marca</th><th>Modelo</th><th>DNI Dueño</th></tr></thead>';
         echo '<tbody>';
         
@@ -39,12 +39,14 @@ if ($patente) {
         echo '</tbody>';
         echo '</table>';
     } else {
+        echo '<div class="container mt-4">';
+        echo '<br>';
         echo '<div class="alert alert-danger" role="alert">No se encontró ningún auto con la patente proporcionada.</div>';
     }
 } 
 
 //botón para volver a la página anterior
-echo '<a href="javascript:history.back()" class="btn btn-success mt-4">Volver</a>';
+echo '<a href="javascript:history.back()" class="btn btn-secondary mt-4">Volver</a>';
 echo '</div>';
 echo '</body>';
 

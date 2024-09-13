@@ -8,9 +8,9 @@
 
 </head>
 <body>
-<div class="blurred-background"></div>
-<div class="container mt-4">
-
+<div class="blurred-background" style="height: 740px;"></div>
+<div class="container" style="height: 740px; box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15); background-color: #c6c2decc;">
+    <br>
 <h4>Crear una página “BuscarPersona.html” que contenga un formulario que permita cargar un
     numero de documento de una persona. Estos datos serán enviados a una página “accionBuscarPersona.php”
     busque los datos de la persona cuyo documento sea el ingresado en el formulario los muestre en un nuevo
@@ -18,16 +18,16 @@
     documento) y estos serán enviados a otra página “ActualizarDatosPersona.php” que actualiza los datos de la
     persona. Utilizar css y validaciones javaScript cuando crea conveniente. Recordar usar la capa de control
     antes generada, no se puede acceder directamente a las clases del ORM.</h4><br>
-        <form id="searchForm" action="./accion/accionBuscarPersonaMod.php" method="post">
+        <form id="searchForm" style="background-color: #d2d0e1d5; box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);" action="./accion/accionBuscarPersonaMod.php" method="post">
             <h1>Buscar Persona:</h1>
             <div class="form-group">
                 <label for="dni">Ingresar un DNI:</label>
                 <input type="text" id="dni" name="dni" class="form-control" >
                 <div id="error-message-dni" class="error-message"></div>
             </div>
-            <button type="submit" class="btn btn-success">Buscar</button>
+            <button type="submit" class="btn btn-info">Buscar</button>
             <br>
-        <a href="javascript:history.back()" class="btn btn-primary mt-4">Volver</a>
+        <a href="javascript:history.back()" class="btn btn-dark mt-4">Volver</a>
         </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

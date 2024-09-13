@@ -15,7 +15,6 @@ echo '<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/
 echo '<link rel="stylesheet" href="../assets/css/error.css">';
 echo '<body>';
 echo '<div class="blurred-background"></div>';
-echo '<div class="container mt-4">';
 
 if ($dni && $patente) {
 
@@ -29,11 +28,12 @@ if ($dni && $patente) {
     if (!empty($persona) && $auto != null) {
         $persona = $persona[0];
         // Mostrar los datos de la persona en una tabla
+        echo '<div class="container" style="height: 1331px; box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15); background-color: #c6c2decc;">';
         echo "<h1>Datos cargados exitosamente!</h1>";
         echo '<br>';
-        echo '<form>';
+        echo '<form style="background-color: #d2d0e1d5;">';
         echo '<h1>Datos del nuevo dueño:</h1>';
-        echo '<table class="table table-success table-bordered">';
+        echo '<table class="table table-dark table-bordered">';
         echo '<thead><tr><th>Nro DNI</th><th>Apellido</th><th>Nombre</th><th>Fecha de Nacimiento</th><th>Teléfono</th><th>Domicilio</th></tr></thead>';
         echo '<tbody>';
         echo '<tr>';
@@ -47,13 +47,12 @@ if ($dni && $patente) {
         echo '</tbody>';
         echo '</table>';
         echo '</form>';
-        echo '<br><br>';
 
 
         // Mostrar los datos del auto en una tabla
-        echo '<form>';
+        echo '<form style="background-color: #d2d0e1d5;">';
         echo '<h1>Antiguos datos del auto:</h1>';
-        echo '<table class="table table-success table-bordered">';
+        echo '<table class="table table-dark table-bordered">';
         echo '<thead><tr><th>Patente</th><th>Marca</th><th>Modelo</th><th>DNI Dueño</th></tr></thead>';
         echo '<tbody>';
         
@@ -67,7 +66,6 @@ if ($dni && $patente) {
         echo '</tbody>';
         echo '</table>';
         echo '</form>';
-        echo '<br><br>';
 
 
         $arregloAutoModificado = array (
@@ -81,9 +79,9 @@ if ($dni && $patente) {
 
 
         // Mostrar los datos del auto en una tabla
-        echo '<form>';
+        echo '<form style="background-color: #d2d0e1d5;">';
         echo '<h1>Nuevos datos del auto:</h1>';
-        echo '<table class="table table-success table-bordered">';
+        echo '<table class="table table-dark table-bordered">';
         echo '<thead><tr><th>Patente</th><th>Marca</th><th>Modelo</th><th>DNI Dueño</th></tr></thead>';
         echo '<tbody>';
         
@@ -96,10 +94,13 @@ if ($dni && $patente) {
         
         echo '</tbody>';
         echo '</table>';
+        echo '<a href="javascript:history.back()" class="btn btn-dark mt-4">Volver</a>';
         echo '</form>';
     }else{
+        echo '<div class="container mt-4">';
         echo '<div class="alert alert-danger" role="alert">Datos inexistentes.</div>';
+        echo '<a href="javascript:history.back()" class="btn btn-secondary mt-4">Volver</a>';
     }
 }
-echo '<a href="javascript:history.back()" class="btn btn-primary mt-4">Volver</a>';
+
 echo '</body';

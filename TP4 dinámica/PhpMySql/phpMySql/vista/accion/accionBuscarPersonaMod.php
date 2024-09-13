@@ -15,7 +15,6 @@ echo '<link rel="stylesheet" href="../assets/css/error.css">';
 echo '<body>';
 echo '<div class="blurred-background"></div>';
 
-echo '<div class="container mt-4">';
 
 // Verificar si se recibió el DNI
 if ($dni) {
@@ -27,12 +26,14 @@ if ($dni) {
 
     if (!empty($persona)) {
         $persona = $persona[0]; // Obtener el primer resultado solo si existe
+        echo '<div class="container" style="height: 1331px; box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15); background-color: #c6c2decc;">';
+        echo '<br>';
         echo '<h1>Resultados de la Búsqueda</h1>';
 
         // Mostrar los datos de la persona en una tabla
-        echo '<form>';
+        echo '<form style="background-color: #d2d0e1d5;">';
         echo '<h2>Datos de la Persona:</h2>';
-        echo '<table class="table table-success table-bordered">';
+        echo '<table class="table table-dark table-bordered">';
         echo '<thead><tr><th>Nro DNI</th><th>Apellido</th><th>Nombre</th><th>Fecha de Nacimiento</th><th>Teléfono</th><th>Domicilio</th></tr></thead>';
         echo '<tbody>';
         echo '<tr>';
@@ -46,10 +47,9 @@ if ($dni) {
         echo '</tbody>';
         echo '</table>';
         echo '</form>';
-        echo '<br><br>';
-        echo '<form id="searchForm" action="ActualizarDatosPersona.php" method="post">';
+        echo '<form id="searchForm" action="ActualizarDatosPersona.php" method="post" style="background-color: #d2d0e1d5;">';
         echo '<h2>Modificar datos:</h2>';
-        echo '<table class="table table-success table-bordered">';
+        echo '<table class="table table-dark table-bordered">';
         echo '<thead><tr><th>Nro DNI</th><th>Apellido</th><th>Nombre</th><th>Fecha de Nacimiento</th><th>Teléfono</th><th>Domicilio</th></tr></thead>';
         echo '<tbody>';
         echo '<tr>';
@@ -62,7 +62,7 @@ if ($dni) {
         echo '</tr>';
         echo '</tbody>';
         echo '</table>';
-        echo '<button type="submit" class="btn btn-success">Cargar</button>';
+        echo '<button type="submit" class="btn btn-info">Cargar</button>';
         echo '</form>';
 
 
@@ -75,7 +75,7 @@ if ($dni) {
         if (!empty($autos)) {
             // Mostrar los autos en una tabla
             echo '<h2>Autos Asociados:</h2>';
-            echo '<table class="table table-success table-bordered mt-3">';
+            echo '<table class="table table-dark table-bordered mt-3">';
             echo '<thead><tr><th>Patente</th><th>Marca</th><th>Modelo</th></tr></thead>';
             echo '<tbody>';
 
@@ -90,6 +90,7 @@ if ($dni) {
             echo '</tbody>';
             echo '</table>';
         } else {
+            echo '<div class="container mt-4">';
             echo '<div class="alert alert-warning" role="alert">No hay autos asociados a este DNI.</div>';
         }
 
@@ -97,9 +98,10 @@ if ($dni) {
 
 
     } else {
+        echo '<div class="container mt-4">';
         echo '<div class="alert alert-danger" role="alert">No se encontró ninguna persona con el DNI proporcionado.</div>';
     }
 }
-echo '<a href="javascript:history.back()" class="btn btn-primary mt-4">Volver</a>';
+echo '<a href="javascript:history.back()" class="btn btn-secondary mt-4">Volver</a>';
 echo '</div>';
 echo '</body>';

@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color: #d2d0e1d5
 }
 
 .blurred-background {
@@ -10,15 +11,17 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('img.jpg') no-repeat center center fixed;
+    background: url('6193485.jpg') no-repeat center center fixed;
     background-size: cover;
     filter: blur(0px);
     z-index: -1; 
 }
-
+h5{
+    color: #e3e3e3;
+}
 .titulo {
     font-size: 250%;
-    color:#01111d;
+    color:#e3e3e3;
     text-align: center;
     margin-bottom: 20px;
     z-index: 1;
@@ -27,10 +30,9 @@ body {
 #menu {
     width: 150%;
     padding: 50px 50px;
-    background-color: #f0f0f0a8;
-    -webkit-box-shadow: 0px 0px 5px 5px rgba(73, 73, 73, 0.15);
-    -moz-box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.15);
-    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.15);
+    background-color: #1e1e21b3;
+    -moz-box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.356);
+    box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.356);
     border-radius: 3px 3px 3px 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
@@ -41,28 +43,28 @@ body {
 #menu input[type="submit"] {
     font-family: 'Overpass', sans-serif;
     font-size: 110%;
-    color:#000000;
+    color:#e3e3e3;
     width: 100%;
     height: 40px;
-    border-color: rgb(90, 190, 115);
-    border-radius: 3px 3px 3px 3px;
+    border-color: #8da0aeb2;
+    border-radius: 20px;
     -moz-border-radius: 3px 3px 3px 3px;
     -webkit-border-radius: 3px 3px 3px 3px;
-    background-color: #85d599bb;
+    background-color: #4d4d8980;
     margin-top: 10px;
     z-index: 1;
 }
 
 #menu input[type="submit"]:hover {
-    border-color: rgba(56, 122, 72, 0.827);
+    border-color: #7d8488c2;
     transform: scale(1.1);
-    background-color: #63b778;
-    color:#313131;
+    background-color: #1f1f4480;
+    color:#a5afb8b2;
     z-index: 1;
 }
 
 #contenedor {
-    padding-right: 150PX;
+    padding-right: 250PX;
     padding-top: 70PX;
     display: flex;
     align-items: center;
@@ -71,7 +73,7 @@ body {
 }
 
 #central {
-    max-width: 320px;
-    width: 100%;
+    max-width: 500px;
+    width: 500px;
     z-index: 1;
 }
